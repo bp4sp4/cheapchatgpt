@@ -1,0 +1,15 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.wrap__input__wrap {
+    display: flex;
+}
+
+.wrap__input__wrap .wrap__input {
+    width: 100%;
+}
