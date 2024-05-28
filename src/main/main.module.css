@@ -2,14 +2,133 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     height: 100vh;
+    background-color: #f7f7f7;
 }
 
-.wrap__input__wrap {
+.wrap__chat {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.wrap__input__wrap .wrap__input {
-    width: 100%;
+.chatWindow {
+    display: flex;
+    flex-direction: column;
+    width: 22rem;
+    height: 600px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.messageList {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.user {
+    background-color: #e0f7fa;
+    align-self: flex-start;
+    font-weight: 600;
+}
+
+.bot {
+    background-color: #f1f8e9;
+    align-self: flex-start;
+    font-weight: 600;
+}
+
+.inputWrap {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.toneSelector {
+    margin-top: 20px;
+}
+
+.toneSelector label {
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.toneSelector__tone {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: border-color 0.3s ease;
+}
+
+.toneSelector__tone:focus {
+    border-color: #007bff;
+}
+
+.toneSelector__tone option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.lastResponse {
+    width: 20rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f1f8e9;
+    margin-left: 20px;
+    height: 580px;
+    overflow-y: auto;
+}
+
+.lastResponse .lastResponse__title {
+    margin-left: 1rem
+}
+
+.lastResponse .lastResponse__wrap {
+    margin-left: 1rem;
+}
+
+.lastResponse .lastResponse__wrap .lastResponse__cont {
+    font-weight: 600;
 }
