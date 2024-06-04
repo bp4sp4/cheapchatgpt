@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./main.module.css"; // CSS 모듈 경로 확인
+import Header from "../header/header";
 
 const ChatGpt = () => {
   const [question, setQuestion] = useState("");
@@ -25,7 +26,9 @@ const ChatGpt = () => {
             친근한: "친근하고 다정한 말투로",
             격식있는: "격식 있고 예의 바른 말투로",
             유머러스한: "유머러스하고 재미있는 말투로",
-            X가지: "무례하고 욕설섞인 직설적인 말투로",
+            X가지: "무례하고 욕설적이면서 비꼬면서 직설적인 말투로",
+            여자친구: "착하고 애교있는 20대여자 말투로",
+            아이돌: "착하고 애교있고 아이돌스러운 10대후반여자 말투로",
           };
 
           const prompt = `다음 질문에 ${toneMap[tone]} 답변하세요: ${question}`;
@@ -83,8 +86,20 @@ const ChatGpt = () => {
     }
   };
 
+  const handleCopyClick = (textToCopy) => {
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        alert("텍스트가 복사되었습니다.");
+      })
+      .catch((error) => {
+        console.error("복사 실패:", error);
+      });
+  };
+
   return (
     <div className={styles.wrap}>
+      <Header></Header>
       <div className={styles.wrap__chat}>
         <h2>말투가 변하는 챗봇</h2>
         <div className={styles.chatWindow}>
@@ -103,32 +118,39 @@ const ChatGpt = () => {
               className={styles.input}
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
-              onKeyPress={handleKeyPress} // 엔터 키 감지
+              onKeyPress={handleKeyPress}
             />
             <button onClick={handleSubmit}>전송</button>
+            <div className={styles.toneSelector}>
+              <label>말투 선택 :</label>
+              <select
+                className={styles.toneSelector__tone}
+                active
+                value={tone}
+                onChange={(e) => setTone(e.target.value)}
+              >
+                <option value="친근한">친근한</option>
+                <option value="격식있는">격식있는</option>
+                <option value="유머러스한">유머러스한</option>
+                <option value="X가지">X가지 없는</option>
+                <option value="여자친구">여자친구</option>
+                <option value="아이돌">아이돌</option>
+              </select>
+            </div>
           </div>
           {error && <p className={styles.error}>{error}</p>}
         </div>
-        <div className={styles.toneSelector}>
-          <label>말투 선택 :</label>
-          <select
-            className={styles.toneSelector__tone}
-            active
-            value={tone}
-            onChange={(e) => setTone(e.target.value)}
-          >
-            <option value="친근한">친근한</option>
-            <option value="격식있는">격식있는</option>
-            <option value="유머러스한">유머러스한</option>
-            <option value="X가지">X가지 없는</option>
-          </select>
-        </div>
       </div>
+
       <div className={styles.lastResponse}>
         <h3 className={styles.lastResponse__title}>챗봇의 모든 답변</h3>
         <div className={styles.lastResponse__wrap}>
           {botResponses.map((response, index) => (
-            <p className={styles.lastResponse__cont} key={index}>
+            <p
+              onClick={() => handleCopyClick(response)}
+              className={styles.lastResponse__cont}
+              key={index}
+            >
               {response}
             </p>
           ))}

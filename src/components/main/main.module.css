@@ -10,12 +10,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 40%;
 }
 
 .chatWindow {
     display: flex;
     flex-direction: column;
-    width: 22rem;
+    width: 100%;
     height: 600px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -38,17 +39,17 @@
 .user {
     background-color: #e0f7fa;
     align-self: flex-start;
-    font-weight: 600;
 }
 
 .bot {
     background-color: #f1f8e9;
     align-self: flex-start;
-    font-weight: 600;
 }
 
 .inputWrap {
     display: flex;
+    align-items: center;
+    /* Center align items */
     padding: 10px;
     border-top: 1px solid #ddd;
 }
@@ -81,7 +82,10 @@ button:hover {
 }
 
 .toneSelector {
-    margin-top: 20px;
+    margin-left: 10px;
+    /* Add margin to the left */
+    display: flex;
+    align-items: center;
 }
 
 .toneSelector label {
@@ -111,24 +115,31 @@ button:hover {
 }
 
 .lastResponse {
-    width: 20rem;
+    width: 40%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #f1f8e9;
     margin-left: 20px;
-    height: 580px;
+    height: 600px;
     overflow-y: auto;
 }
 
-.lastResponse .lastResponse__title {
-    margin-left: 1rem
+.lastResponse__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.lastResponse .lastResponse__wrap {
-    margin-left: 1rem;
+.lastResponse__wrap {
+    display: flex;
+    flex-direction: column;
 }
 
-.lastResponse .lastResponse__wrap .lastResponse__cont {
-    font-weight: 600;
+.lastResponse__cont {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
