@@ -101,7 +101,7 @@ const ChatGpt = () => {
     <div className={styles.wrap}>
       <Header></Header>
       <div className={styles.wrap__chat}>
-        <h2>말투가 변하는 챗봇</h2>
+        <h3 className={styles.wrap__chat__title}>말투가 변하는 챗봇</h3>
         <div className={styles.chatWindow}>
           <div className={styles.messageList}>
             {messages.map((msg, index) => (
@@ -143,7 +143,7 @@ const ChatGpt = () => {
       </div>
 
       <div className={styles.lastResponse}>
-        <h3 className={styles.lastResponse__title}>챗봇의 모든 답변</h3>
+        <h3 className={styles.lastResponse__title}>CopyBoard</h3>
         <div className={styles.lastResponse__wrap}>
           {botResponses.map((response, index) => (
             <p

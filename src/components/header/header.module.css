@@ -1,0 +1,24 @@
+.header__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 60px;
+}
+
+.header__wrap .header__wrap__nav {
+    margin: 20px 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
