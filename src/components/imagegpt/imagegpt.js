@@ -1,4 +1,6 @@
 import axios from "axios";
+import Header from "../header/header";
+import styles from "../imagegpt/imagegpt.module.css";
 
 const ImageGpt = () => {
   const handleSubmit = async (event) => {
@@ -36,7 +38,8 @@ const ImageGpt = () => {
   };
 
   return (
-    <div>
+    <div className={styles.wrap}>
+      <Header></Header>
       <form onSubmit={handleSubmit} accept-charset="UTF-8">
         <input
           type="text"
