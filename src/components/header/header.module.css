@@ -22,3 +22,11 @@ a:hover {
 a:visited {
     color: black;
 }
+
+a:link {
+    color: black;
+}
+
+a:active {
+    color: black;
+}

@@ -65,7 +65,7 @@ const ImageGpt = () => {
             className={styles.input}
             type="text"
             name="textInput"
-            placeholder="예) Ugly Dog, Pretty Dog 등등 "
+            placeholder="예) Ugly Dog, Pretty Dog - 영어만 가능"
           />
           <button className={styles.button} type="submit">
             무작위 이미지!
