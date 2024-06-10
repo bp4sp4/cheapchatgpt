@@ -1,0 +1,40 @@
+.footer__wrap {
+    width: 100%;
+    background-color: #ffffff;
+    color: gray;
+    padding: 30px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #eee;
+
+}
+
+.footer__wrap nav {
+    box-sizing: border-box;
+}
+
+.footer__wrap nav a {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 20px 10px;
+    text-decoration: none;
+    color: gray;
+}
+
+.footer__wrap nav a:visited {
+    color: gray;
+}
+
+.footer__wrap nav a:hover {
+    color: gray;
+}
+
+.footer__wrap__content {
+    font-size: 1rem;
+    text-align: center;
+    z-index: 999;
+}

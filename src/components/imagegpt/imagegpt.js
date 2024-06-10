@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Header from "../header/header";
 import styles from "./imagegpt.module.css";
+import Footer from "../footer/footer";
 
 const ImageGpt = () => {
   const [imageUrl, setImageUrl] = useState("");
@@ -57,7 +58,7 @@ const ImageGpt = () => {
               className={styles.image}
             />
           ) : (
-            <div className={styles.placeholder}>이미지가 여기 표시됩니다</div>
+            <div className={styles.placeholder}>이미지 표시 영역</div>
           )}
         </div>
         <form onSubmit={handleSubmit} className={styles.form}>
@@ -72,6 +73,7 @@ const ImageGpt = () => {
           </button>
         </form>
       </div>
+      <Footer />
     </div>
   );
 };

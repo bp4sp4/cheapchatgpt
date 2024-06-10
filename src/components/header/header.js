@@ -4,16 +4,24 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className={styles.header__wrap}>
-      <div className={styles.header__wrap__nav}>
-        <Link to="/">
-          <h3>감정있는 GPT</h3>
-        </Link>
-      </div>
-      <div className={styles.header__wrap__nav}>
-        <Link to="/imagegpt/imagegpt">
-          <h3>이미지</h3>
-        </Link>
+    <header className={styles.header}>
+      <div className={styles.nav}>
+        <div className={styles.leftNav}>
+          <Link to="/" className={styles.logo}>
+            ChatGPT 놀이
+          </Link>
+          <Link to="/" className={styles.navLink}>
+            GPT 놀이터
+          </Link>
+          <Link to="/imagegpt/imagegpt" className={styles.navLink}>
+            이미지
+          </Link>
+        </div>
+        <nav className={styles.rightNav}>
+          <Link to="/login" className={styles.navLink}>
+            로그인
+          </Link>
+        </nav>
       </div>
     </header>
   );

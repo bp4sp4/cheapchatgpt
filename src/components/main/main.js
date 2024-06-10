@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import styles from "./main.module.css"; // CSS 모듈 경로 확인
+import styles from "./main.module.css";
 import Header from "../header/header";
+import Footer from "../footer/footer";
 
 const ChatGpt = () => {
   const [question, setQuestion] = useState("");
@@ -99,7 +100,7 @@ const ChatGpt = () => {
 
   return (
     <div className={styles.wrap}>
-      <Header></Header>
+      <Header />
       <div className={styles.wrap__chat}>
         <h3 className={styles.wrap__chat__title}>말투가 변하는 챗봇</h3>
         <div className={styles.chatWindow}>
@@ -141,7 +142,6 @@ const ChatGpt = () => {
           {error && <p className={styles.error}>{error}</p>}
         </div>
       </div>
-
       <div className={styles.lastResponse}>
         <h3 className={styles.lastResponse__title}>CopyBoard</h3>
         <div className={styles.lastResponse__wrap}>
@@ -156,6 +156,7 @@ const ChatGpt = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

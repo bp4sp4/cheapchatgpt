@@ -1,32 +1,58 @@
-.header__wrap {
+.header {
+    width: 100%;
+    background-color: #001f3f;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: 0;
-    height: 60px;
+    color: white;
 }
 
-.header__wrap .header__wrap__nav {
-    margin: 20px 30px;
+.leftNav {
+    display: flex;
+    align-items: center;
 }
 
-a {
+.rightNav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
     text-decoration: none;
+    color: white;
+    margin-right: 20px;
 }
 
-a:hover {
-    color: black;
+.navLink {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
 }
 
-a:visited {
-    color: black;
+.navLink:hover {
+    color: #1c8adb;
+    /* 밝은 블루 색상 */
 }
 
-a:link {
-    color: black;
-}
-
-a:active {
-    color: black;
+.navLink:visited,
+.navLink:link,
+.navLink:active {
+    color: white;
 }
