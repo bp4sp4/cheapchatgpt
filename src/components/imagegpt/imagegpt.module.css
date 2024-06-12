@@ -4,8 +4,6 @@
     align-items: center;
     height: 100vh;
     background-color: #f7f7f7;
-    flex-direction: column;
-    padding: 20px;
     box-sizing: border-box;
 }
 

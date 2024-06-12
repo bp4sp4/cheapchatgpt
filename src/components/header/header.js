@@ -16,6 +16,9 @@ const Header = () => {
           <Link to="/imagegpt/imagegpt" className={styles.navLink}>
             이미지
           </Link>
+          <Link to="vision/vision" className={styles.navLink}>
+            비전
+          </Link>
         </div>
         <nav className={styles.rightNav}>
           <Link to="/login" className={styles.navLink}>
