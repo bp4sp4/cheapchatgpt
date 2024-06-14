@@ -8,7 +8,7 @@ const Header = () => {
       <div className={styles.nav}>
         <div className={styles.leftNav}>
           <Link to="/" className={styles.logo}>
-            ChatGPT 놀이
+            타이틀
           </Link>
           <Link to="/" className={styles.navLink}>
             GPT 놀이터
