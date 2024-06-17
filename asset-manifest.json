@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cheapchatgpt/static/css/main.b270f89f.css",
+    "main.js": "/cheapchatgpt/static/js/main.e46592b1.js",
+    "index.html": "/cheapchatgpt/index.html",
+    "main.b270f89f.css.map": "/cheapchatgpt/static/css/main.b270f89f.css.map",
+    "main.e46592b1.js.map": "/cheapchatgpt/static/js/main.e46592b1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b270f89f.css",
+    "static/js/main.e46592b1.js"
+  ]
+}
