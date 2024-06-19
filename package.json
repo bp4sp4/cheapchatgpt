@@ -29,7 +29,7 @@
     "eject": "react-scripts eject",
     "predeploy": "react-scripts build",
     "deploy": "dotenv -e .env gh-pages -d build"
-  },  
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
