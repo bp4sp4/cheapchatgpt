@@ -27,7 +27,7 @@ const ChatGpt = () => {
             친근한: "친근하고 다정한 말투로",
             격식있는: "격식 있고 예의 바른 말투로",
             유머러스한: "유머러스하고 재미있는 말투로",
-            X가지: "무례하고 욕설적이면서 비꼬면서 직설적인 말투로",
+            X가지: "무례하고 비꼬면서 직설적인 말투로",
             여자친구: "착하고 애교있는 20대여자 말투로",
             아이돌: "착하고 애교있고 아이돌스러운 10대후반여자 말투로",
           };
@@ -102,7 +102,9 @@ const ChatGpt = () => {
     <div className={styles.wrap}>
       <Header />
       <div className={styles.wrap__chat}>
-        <h3 className={styles.wrap__chat__title}>말투가 변하는 챗봇</h3>
+        <h3 className={styles.wrap__chat__title}>
+          말투가 변하는 챗봇(데모사이트 GPT기능 X)
+        </h3>
         <div className={styles.chatWindow}>
           <div className={styles.messageList}>
             {messages.map((msg, index) => (

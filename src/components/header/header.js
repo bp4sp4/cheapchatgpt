@@ -8,7 +8,7 @@ const Header = () => {
       <div className={styles.nav}>
         <div className={styles.leftNav}>
           <Link to="/" className={styles.logo}>
-            타이틀
+            GPT Play
           </Link>
           <Link to="/" className={styles.navLink}>
             GPT 놀이터
@@ -16,15 +16,7 @@ const Header = () => {
           <Link to="/imagegpt/imagegpt" className={styles.navLink}>
             이미지
           </Link>
-          <Link to="vision/vision" className={styles.navLink}>
-            비전
-          </Link>
         </div>
-        <nav className={styles.rightNav}>
-          <Link to="/login" className={styles.navLink}>
-            로그인
-          </Link>
-        </nav>
       </div>
     </header>
   );
